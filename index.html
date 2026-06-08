@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Portfolio of Navid Shirandasht. Frontend developer focused on React, JavaScript, UI design and modern web development." />
+  <link rel="icon" href="Icons/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="dollar.css" />
+  <title>Navid Projects</title>
+</head>
+
+<body>
+  <div class="scene">
+    <div class="card" id="card">
+      <div class="face front">
+        <header class="bill-header">
+          <div class="nav-container">
+            <h2 class="logo">NAVIDPROJECTS</h2>
+            <div class="contact-icons">
+              <a href="tel:+989353058635" aria-label="Phone Number" title="Call Me">
+                <img src="Icons/phone.svg" alt="phone icon" />
+              </a>
+              <a href="mailto:navidshirandasht@gmail.com" aria-label="Email" title="Email Me" target="_blank">
+                <img src="Icons/envelope.svg" alt="email icon" />
+              </a>
+              <a href="https://www.github.com/navidshdt" target="_blank" aria-label="Github" title="Github"
+                rel="noopener noreferrer">
+                <img src="Icons/github.svg" alt="github icon" />
+              </a>
+            </div>
+          </div>
+        </header>
+
+        <main class="bill-main">
+          <div class="bill-content">
+            <section class="hero">
+              <div class="container hero-content">
+                <div class="identity-panel">
+                  <a href="tel:+989353058635" aria-label="Phone Number" title="Call Me">09353058635</a>
+                  <img class="stamp" src="Icons/logo.png" alt="Navid Projects logo" />
+                </div>
+                <img class="avatar" src="Images/avatar.png" alt="Portrait of Navid Shirandasht" />
+                <div class="hero-actions">
+                  <button class="btn" id="aboutBtn">About</button>
+                </div>
+              </div>
+            </section>
+          </div>
+        </main>
+        <footer class="bill-footer">
+          <h2 class="bill-value"><span>100</span>% DEDICATION</h2>
+          <button class="flip-btn" aria-label="Flip bill">
+            <span>check the other side</span>&#8634;
+          </button>
+        </footer>
+      </div>
+      <div class="face back">
+        <header class="bill-header">
+          <div class="nav-container">
+            <h2 class="logo">NAVIDPROJECTS</h2>
+            <div class="contact-icons">
+              <a href="tel:+989353058635" aria-label="Phone Number" title="Call Me">
+                <img src="Icons/phone.svg" alt="phone icon" />
+              </a>
+              <a href="mailto:navidshirandasht@gmail.com" aria-label="Email" title="Email Me" target="_blank">
+                <img src="Icons/envelope.svg" alt="email icon" />
+              </a>
+              <a href="https://www.github.com/navidshdt" target="_blank" aria-label="Github" title="Github"
+                rel="noopener noreferrer">
+                <img src="Icons/github.svg" alt="github icon" />
+              </a>
+            </div>
+          </div>
+        </header>
+        <div class="bill-main">
+          <div class="bill-content">
+            <section class="hero">
+              <h1>IN NAVIDPROJECTS WE TRUST</h1>
+              <p class="subtitle">
+                Crafted with care, designed for clarity, and built to stand
+                out in a crowded digital space.
+              </p>
+            </section>
+            <section class="tech-stack">
+              <div>
+                <h2>Assets</h2>
+                <ul>
+                  <li>Html</li>
+                  <li>Css</li>
+                  <li>JavaScript</li>
+                  <li>Git & Github</li>
+                  <li>React</li>
+                  <li>AI Tools</li>
+                  <li>Data Structures & Algorithms</li>
+                </ul>
+              </div>
+              <div>
+                <h2>Investments</h2>
+                <ul>
+                  <li>Next Js</li>
+                  <li>TypeScript</li>
+                  <li>Tailwind</li>
+                  <li>WordPress</li>
+                  <li>Adobe PhotoShop, Xd, Illustrator, Indesign</li>
+                  <li>UI / UX design</li>
+                  <li>Brand Building</li>
+                </ul>
+              </div>
+              <div>
+                <h2>Reserve Funds</h2>
+                <ul>
+                  <li>Curiosity</li>
+                  <li>Problem Solving</li>
+                  <li>Persistence</li>
+                  <li>Adaptability</li>
+                  <li>Continuous Learning</li>
+                </ul>
+              </div>
+            </section>
+          </div>
+        </div>
+        <footer class="bill-footer">
+          <h2 class="bill-value"><span>100</span>% ACCOUNTABILITY</h2>
+          <button class="flip-btn" aria-label="Flip bill">
+            <span>return</span>&#8635;
+          </button>
+        </footer>
+      </div>
+    </div>
+  </div>
+  <div class="modal-backdrop" id="aboutModal">
+    <div class="modal-content">
+      <button class="close-btn" id="closeBtn">&times;</button>
+      <p>
+        I've always had a passion for creating. That's what led me to study
+        Mechanical Engineering at Shiraz University. During the pandemic, I
+        started learning Python out of curiosity. What began as a small
+        experiment gradually evolved into a journey through programming,
+        design, and web development - a journey that is still ongoing.
+      </p>
+    </div>
+  </div>
+  <script>
+    const card = document.getElementById('card');
+    const flipBtn = document.querySelectorAll('.flip-btn');
+    const aboutBtn = document.getElementById('aboutBtn');
+    const aboutModal = document.getElementById('aboutModal');
+    const closeBtn = document.getElementById('closeBtn');
+
+    flipBtn.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        card.classList.toggle('flipped');
+      });
+    });
+    aboutBtn.addEventListener('click', () => {
+      aboutModal.classList.add('active');
+    });
+    closeBtn.addEventListener('click', () => {
+      aboutModal.classList.remove('active');
+    });
+  </script>
+</body>
+
+</html>
